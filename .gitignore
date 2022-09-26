@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /.idea/uiDesigner.xml
+/out/production/QUIZ_CARD_BUILDER/.idea/.gitignore
+/out/production/QUIZ_CARD_BUILDER/.gitignore
+/Cards(1)
+/out/production/QUIZ_CARD_BUILDER/.idea/misc.xml
+/out/production/QUIZ_CARD_BUILDER/.idea/modules.xml
+/out/production/QUIZ_CARD_BUILDER/.idea/QUIZ_CARD_BUILDER.iml
+/out/production/QUIZ_CARD_BUILDER/README.md
+/out/production/QUIZ_CARD_BUILDER/.idea/vcs.xml
+/out/production/QUIZ_CARD_BUILDER/Cards(1)

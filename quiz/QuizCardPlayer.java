@@ -26,6 +26,7 @@ public class QuizCardPlayer
     public void go()
     {
         frame = new JFrame("Quiz Card Player"); // хмхжхюкхгюжхъ нямнбмнцн нймю
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); // гюбепьемхе опх гюйпшрхх
         JPanel mainPanel = new JPanel(); // хмхжхюкхгюжхъ оюмекх
         Font bigFont = new Font("sanserif", Font.BOLD, 24); // мюярпнийю ьпхтрю
 
@@ -39,13 +40,13 @@ public class QuizCardPlayer
         qScroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); // цнпхгнмрюкэмши яйпнккхмц
         mainPanel.add(qScroller); // днаюбхрэ яйпнккеп мю оюмекэ
 
-        nextButton = new JButton("Show Question"); // хмхжхюкхгюжхъ ймнойх
+        nextButton = new JButton("оНЙЮГЮРЭ БНОПНЯ"); // хмхжхюкхгюжхъ ймнойх
         mainPanel.add(nextButton); // днаюбкемхе ймнойх мю оюмекэ
         nextButton.addActionListener(new NextCardListener()); // днаюбкемхе яксьюрекъ дкъ ймнойх
 
         JMenuBar menuBar = new JMenuBar(); // оюмекэ лемч
-        JMenu fileMenu = new JMenu("File"); // осмйр лемч
-        JMenuItem loadMenuItem = new JMenuItem("Load card set"); // ондосмйр лемч
+        JMenu fileMenu = new JMenu("тЮИК"); // осмйр лемч
+        JMenuItem loadMenuItem = new JMenuItem("гЮЦПСГХРЭ ЙНЛОКЕЙР ЙЮПРНВЕЙ"); // ондосмйр лемч
         loadMenuItem.addActionListener(new openMenuListener()); // яксьюрекэ дкъ осмйрю лемч
         fileMenu.add(loadMenuItem); // днаюбкемхе ондосмйрю б осмйр
         menuBar.add(fileMenu); // днаюбкемхе осмйрю б оюмекэ
@@ -62,7 +63,7 @@ public class QuizCardPlayer
             if(isShowAnswer) // еякх нрбер онйюгюм
             {
                 display.setText(currentCard.getAnswer()); // бшбнд нрберю хг рейсыеи йюпрнвйх
-                nextButton.setText("Next Card"); // ялемхрэ хлъ ймнойх
+                nextButton.setText("яКЕДСЧЫЮЪ ЙЮПРНВЙЮ"); // ялемхрэ хлъ ймнойх
                 isShowAnswer = false; // нрйкчвюел люпйеп нрберю
             }
             else
@@ -73,7 +74,7 @@ public class QuizCardPlayer
                 }
                 else
                 {
-                    display.setText("That was last card"); // бшбнд яннаыемхъ
+                    display.setText("щРН АШКЮ ОНЯКЕДМЪЪ ЙЮПРНВЙЮ"); // бшбнд яннаыемхъ
                     nextButton.setEnabled(false); // ядекюрэ ймнойс меднярсомни
                 } // OUT OF INNER IF-ELSE
             } // OUT OF OUTER IF-ELSE
@@ -105,7 +106,7 @@ public class QuizCardPlayer
         }
         catch(Exception exc)
         {
-            System.out.println("couldn't read the card file"); // бшбнд яннаыемхъ мю йнмянкэ
+            System.out.println("МЕБНГЛНФМН НРЙПШРЭ ТЮИК"); // бшбнд яннаыемхъ мю йнмянкэ
             exc.printStackTrace(); // онкмши осрэ ньхайх
         } // OUT OF TRY-CATCH
         showNextCard();
@@ -116,7 +117,7 @@ public class QuizCardPlayer
         String[] result = lineToParse.split("/"); // пюгдекъел ярпнйх бнопняю х нрберю
         QuizCard card = new QuizCard(result[0], result[1]); // янгдюмхе йюпрнвйх
         cardList.add(card); // днаюбкемхе йюпрнвйх б яохянй
-        System.out.println("made a card"); // бшбнд яннаыемхъ б йнмянкэ
+        System.out.println("ЙЮПРНВЙЮ ЯНГДЮМЮ"); // бшбнд яннаыемхъ б йнмянкэ
     } // OUT OF METHOD
 
     private void showNextCard() // лернд бшбндю хмтнплюжхх
@@ -124,7 +125,7 @@ public class QuizCardPlayer
         currentCard = cardList.get(currentCardIndex); // бшапюрэ якедсчысч йюпрнвйс хг яохяйю
         currentCardIndex++; // сбекхвхрэ гмювемхе хмдейяю
         display.setText(currentCard.getQuestion()); // бшбнд бнопняю мю дхяокеи
-        nextButton.setText("Show Answer"); // ялемхрэ хлъ ймнойх
+        nextButton.setText("оНЙЮГЮРЭ НРБЕР"); // ялемхрэ хлъ ймнойх
         isShowAnswer = true; // хглемхрэ люпйеп
     } // OUT OF METHOD
 } // OUT OF CLASS
