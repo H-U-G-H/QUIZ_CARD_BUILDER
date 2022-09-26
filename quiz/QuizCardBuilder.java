@@ -70,6 +70,7 @@ public class QuizCardBuilder
         frame.setJMenuBar(menuBar); // днаюбкемхе оюмекх лемч б нямнбмне нймн
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel); // днаюбкемхе нямнбмни оюмекх б жемрп нямнбмнцн нймю
         frame.setSize(500, 600); // нопедекемхе пюглепю нямнбмнцн нймю
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); // гюбепьемхе опх гюйпшрхх
         frame.setVisible(true); // бхдхлнярэ нямнбмнцн нймю (дю)
     }
 
